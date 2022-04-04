@@ -1,0 +1,30 @@
+/*retex*/
+
+.r {
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    min-height: 100vh;
+    width: 0vw;
+    border-right: solid 1px black;
+    z-index: 2;
+}
+
+.rApres {
+    animation: retex 1s both;
+    display: flex;
+}
+
+@keyframes retex {
+    0% {
+        min-width: 0vw;
+    }
+    100% {
+        min-width: 75vw;
+    }
+}
+
+
+

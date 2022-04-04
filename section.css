@@ -1,0 +1,97 @@
+/*Section*/
+
+section {
+    min-width: 25vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: #f2f2f2;
+    z-index: 1;
+    border-right: solid 1px black;
+    top: 0;
+}
+
+.s:hover {
+    background-color: black;
+    color: #f2f2f2;
+    transition: all 0.2s ease-out;
+}
+
+.s:hover small {
+    color: #f2f2f2;
+    transition: all 0.2s ease-out;
+}
+
+section > div {
+    padding: 2vw;
+    min-width: 21vw;
+}
+
+.s img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.ig {
+    display: none;
+}
+
+.s:hover .ig, .cross:hover .ig {
+    display: flex;
+}
+
+.s:hover .ii, .cross:hover .ii {
+    display: none;
+}
+
+small {
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.s1 {
+    background-color: transparent;
+    min-width: 100vw;
+}
+
+.s7 {
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(255, 174, 0, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.s7 img{
+    width: 3vw;
+    height: 3vw;
+    margin: 5px;
+}
+
+.s7 a:hover img {
+    filter: invert();
+    transition: all 0.2s ease-out;
+}
+
+.s7 a:hover {
+    color: #f2f2f2;
+    transition: all 0.2s ease-out;
+}
+
+.s7 a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.s7 div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
