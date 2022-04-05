@@ -1,8 +1,26 @@
+@media screen and (max-width: 768px) { /*petit*/
+    section {
+        min-width: 100vw;
+        min-height: 25vh;
+    }
+
+    .s1, .s7 {
+        min-height: 100vh;
+    }
+
+}
+
+@media screen and (min-width: 768px) {  /*grand*/
+    section {
+        min-width: 25vw;
+        min-height: 100vh;
+    }
+}
+
+
 /*Section*/
 
 section {
-    min-width: 25vw;
-    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;

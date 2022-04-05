@@ -12,6 +12,7 @@ var quelRetexS = '';
 var quelRetex = -1;
 var taillePage = 2.20;
 
+
 const s2 = document.querySelector('.s2');
 const r2 = document.querySelector('.r2');
 const s3 = document.querySelector('.s3');
@@ -30,15 +31,22 @@ window.addEventListener('load', () => {
 })
 
 scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-});
+    if (window.innerWidth>=768){
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    }
+})
+
+
 
 scrollContainer.addEventListener('scroll', () => {
-    let scroll = scrollContainer.scrollLeft / (scrollContainer.clientWidth * taillePage);
-    let scrollPercent = Math.round(scroll * 100);
-    scrollbar.style.width = scrollPercent + "%";
-    fond.style.left = -scrollContainer.scrollLeft/200 + "vw";
+    fond.style.top = "0";
+    if (window.innerWidth>=768){
+        let scroll = scrollContainer.scrollLeft / (scrollContainer.clientWidth * taillePage);
+        let scrollPercent = Math.round(scroll * 100);
+        scrollbar.style.width = scrollPercent + "%";
+        fond.style.left = -scrollContainer.scrollLeft/200 + "vw";
+    }
     if ( scrollContainer.scrollLeft>scrollContainer.clientWidth ) {
         fond.style.visibility = "hidden";
     }

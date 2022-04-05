@@ -1,13 +1,109 @@
-@font-face {
-    font-family: block;
-    src: url(TS\ Block\ Bold.ttf);
+
+
+@media screen and (max-width: 768px) { /*petit*/
+    body {
+        overflow-x: hidden;
+    }
+
+    main { 
+        flex-direction: column;
+        scroll-behavior: auto;
+        width: 100vw;
+    }
+
+    .fond {
+        top: 5vh;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-bottom: solid 1px black;
+    }
+
+    .d1, .l1 {
+        width: 100vw;
+        height: 20vh;
+        justify-content: flex-start;
+    }
+
+    .d2, .l2 {
+        width: 75vw;
+        min-height: 80vh;
+        padding-top: 10vw;
+    }
+
+    .d1 img, .l1 img{
+        max-width: 90%;
+        max-height: 100%;
+    }
+
+    .avant, .apres {
+        flex-direction: column-reverse;
+    }
+
+    .scroll, .scroll2 {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {  /*grand*/
+    body {
+        overflow: hidden;
+    }
+
+    main { 
+        scroll-behavior: unset;
+    }
+
+    .d1, .l1 {
+        width: 60vw;
+        border-right: solid 1px black;
+        justify-content: center;
+    }
+
+    .d2, .l2 {
+        width: 35vw;
+        padding: 5vh;
+        max-height: 100vh;
+    }
+    .d1 img, .l1 img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*Srcoll*/
+
+    .scroll, .scroll2 {
+        position: fixed;
+        bottom: 0;
+        height: 0.8vh;
+        left: 0;
+        transition: width 0.25s ease-in-out;
+    }
+    
+    .scroll {
+        background-color: rgba(27, 27, 27, 0.651);
+        z-index: 3;
+    }
+    
+    .scroll2 {
+        background-color: rgba(0, 0, 0, 0.062);
+        width: 100vw;
+        z-index: 2;
+    }
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+}
+
+main {
+    overflow-x: hidden;
+    display: flex;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 /*Fond*/
@@ -22,34 +118,23 @@ body {
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(255, 174, 0, 0.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-   /* background: linear-gradient(217deg, rgba(236, 255, 128, 0.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(86, 255, 176, 0.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(130, 253, 255, 0.8), rgba(0,0,255,0) 70.71%);*/
     z-index: 0;
 }
 
 .d1, .l1 {
-    width: 60vw;
-    border-right: solid 1px black;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
 }
 
 .d1 img, .l1 img{
-    width: 100%;
-    height: auto;
     padding-bottom: 1vh;
 }
 
 .d2, .l2 {
-    width: 35vw;
     display: flex;
     flex-direction: column;
-    padding: 5vh;
     justify-content: center;
     font-size: 2.5vh;
-    max-height: 100vh;
 }
 
 .d2 > div {
@@ -79,36 +164,6 @@ body {
     padding: 1vh;
     padding-left: 0;
 
-}
-
-main {
-    overflow-x: hidden;
-    display: flex;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: unset;
-}
-
-/*scroll*/
-
-.scroll, .scroll2 {
-    position: fixed;
-    bottom: 0;
-    height: 0.8vh;
-    left: 0;
-    transition: width 0.25s ease-in-out;
-}
-
-.scroll {
-    background-color: rgba(27, 27, 27, 0.651);
-    z-index: 3;
-}
-
-.scroll2 {
-    background-color: rgba(0, 0, 0, 0.062);
-    width: 100vw;
-    z-index: 2;
 }
 
 /* Load */

@@ -1,60 +1,120 @@
-a.contactButton, a.contactButtonFond, a.projetButtonFond, a.projetButton {
-    display: flex;
-    position: absolute;
-    top: 5vh;
-    right: 5vw;
-    background-color: white;
-    color: white;
-    transition: all 0.2s ease-out;
-    text-decoration: none;
-    border-radius: 90px;
-    padding: 5px 10px;
-    text-align: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
-    min-width: 6vw;
-    min-height: 3.5vh;
-    justify-content: center;
-    margin: 5px;
-    align-items: center;
+@media screen and (max-width: 768px) { /*petit*/
+    a.contactButton, a.contactButtonFond, a.projetButtonFond, a.projetButton {
+        display: none;
+        visibility: hidden;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 4;
+    }
+
+    .barre {
+        height: 5vh;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+    }
+
+    .menu {
+        width: 100vw;
+        border-top: solid 1px #f2f2f2;
+        height: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    .menuAfter {
+        width: 100vw;
+        border-top: solid 1px #f2f2f2;
+        visibility: visible;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #f2f2f2;
+        padding: 5px;
+    }
+
+    @keyframes transitionMenu {
+        0% {
+            height: 0vh;
+        }
+        100% {
+            height: 10vh;
+        }
+    }
 }
 
-a.contactButton, a.contactButtonFond {
-    right: 3vw;
+@media screen and (min-width: 768px) { /*grand*/
+    nav {
+        display: none;
+        visibility: hidden;
+    }
+
+    a.contactButton, a.contactButtonFond, a.projetButtonFond, a.projetButton {
+        display: flex;
+        position: fixed;
+        background-color: white;
+        color: white;
+        transition: all 0.2s ease-out;
+        text-decoration: none;
+        border-radius: 90px;
+        padding: 5px 10px;
+        text-align: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2vw;
+        min-width: 6vw;
+        min-height: 3.5vh;
+        justify-content: center;
+        margin: 5px;
+        align-items: center;
+        top: 5vh;
+    }
+    
+    a.contactButton, a.contactButtonFond {
+        right: 3vw;
+    }
+    
+    a.projetButtonFond, a.projetButton {
+        right: 12vw;
+    }
+    
+    a.contactButton, a.projetButton{
+        mix-blend-mode: difference;
+        z-index: 4;
+        filter: drop-shadow(0 0 0 black);
+    }
+    
+    a.contactButtonFond, a.projetButtonFond {
+        z-index: 1;
+    }
+    
+    .contactButton span, .projetButton span{
+        mix-blend-mode: difference;
+    }
+    
+    .contactButton:hover span, .projetButton:hover span {
+        color: white;
+        mix-blend-mode: color;
+        mix-blend-mode: revert;
+    }
+    
+    .contactButton:hover, .projetButton:hover {
+        background-color: rgba(255, 174, 0, 0.8);
+        filter: none;
+        transition: all 0.2s ease-out;
+        mix-blend-mode: revert;
+    }
+    
+    a {
+        cursor: pointer;
+    }
 }
 
-a.projetButtonFond, a.projetButton {
-    right: 12vw;
-}
-
-a.contactButton, a.projetButton{
-    mix-blend-mode: difference;
-    z-index: 4;
-    filter: drop-shadow(0 0 0 black);
-}
-
-a.contactButtonFond, a.projetButtonFond {
-    z-index: 1;
-}
-
-.contactButton span, .projetButton span{
-    mix-blend-mode: difference;
-}
-
-.contactButton:hover span, .projetButton:hover span {
-    color: white;
-    mix-blend-mode: color;
-    mix-blend-mode: revert;
-}
-
-.contactButton:hover, .projetButton:hover {
-    background-color: rgba(255, 174, 0, 0.8);
-    filter: none;
-    transition: all 0.2s ease-out;
-    mix-blend-mode: revert;
-}
-
-a, button {
-    cursor: pointer;
-}
