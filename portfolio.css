@@ -43,6 +43,10 @@
         visibility: hidden;
         display: none;
     }
+
+    .load {
+        top: 5vh;
+    }
 }
 
 @media screen and (min-width: 768px) {  /*grand*/

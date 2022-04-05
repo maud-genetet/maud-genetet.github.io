@@ -38,7 +38,6 @@ scrollContainer.addEventListener("wheel", (evt) => {
 })
 
 
-
 scrollContainer.addEventListener('scroll', () => {
     fond.style.top = "0";
     if (window.innerWidth>=768){
@@ -60,7 +59,6 @@ function viewRetex(sect,num){
         if (quelRetex!=-1){
             fermerRetex(quelRetexS);
         }
-        console.log('yo2');
         scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2));
         document.querySelector('.r'+sect).classList.add('rApres');
         document.querySelector('.s'+sect).style.borderRight = 'none';
