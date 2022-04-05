@@ -30,27 +30,39 @@ window.addEventListener('load', () => {
     imageChargement.classList.add('loadTerminer3');
 })
 
+
 scrollContainer.addEventListener("wheel", (evt) => {
-    if (window.innerWidth>=768){
+    if (window.innerWidth>768){
         evt.preventDefault();
         scrollContainer.scrollLeft += evt.deltaY;
     }
 })
 
 
+window.addEventListener('touchmove', (evt) => {
+    fond.style.top = -screenY/200 + "vh";
+})
+
 scrollContainer.addEventListener('scroll', () => {
-    fond.style.top = "0";
-    if (window.innerWidth>=768){
+    console.log("yo8");
+    if (window.innerWidth>768){
+        fond.style.top = "0";
         let scroll = scrollContainer.scrollLeft / (scrollContainer.clientWidth * taillePage);
         let scrollPercent = Math.round(scroll * 100);
         scrollbar.style.width = scrollPercent + "%";
         fond.style.left = -scrollContainer.scrollLeft/200 + "vw";
-    }
-    if ( scrollContainer.scrollLeft>scrollContainer.clientWidth ) {
-        fond.style.visibility = "hidden";
+        if ( scrollContainer.scrollLeft>scrollContainer.clientWidth ) {
+            fond.style.visibility = "hidden";
+        }
+        else {
+            fond.style.visibility = "visible";
+        }
     }
     else {
+        fond.style.left = "0";
         fond.style.visibility = "visible";
+        fond.style.top = -screenY/200 + "vh";
+        console.log("yo5");
     }
 })
 
@@ -59,7 +71,12 @@ function viewRetex(sect,num){
         if (quelRetex!=-1){
             fermerRetex(quelRetexS);
         }
-        scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2));
+        if (window.innerWidth>768){
+            scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2));
+        }
+        else {
+            scrollTo(0, (window.innerHeight+1)*(1+0.25*(num-2)));
+        }
         document.querySelector('.r'+sect).classList.add('rApres');
         document.querySelector('.s'+sect).style.borderRight = 'none';
         quelRetexS = sect;
@@ -75,7 +92,9 @@ function viewRetex(sect,num){
 
 function fermerRetex(sect) {
     document.querySelector('.r'+sect).classList.remove('rApres');
-    document.querySelector('.s'+sect).style.borderRight = 'solid 1px black';
+    if (window.innerWidth>768){
+        document.querySelector('.s'+sect).style.borderRight = 'solid 1px black';
+    }
     taillePage-=1;
 }
 

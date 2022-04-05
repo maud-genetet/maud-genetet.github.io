@@ -1,4 +1,20 @@
+@media screen and (max-width: 426px) {  /*telephone*/
+    .d2 .competences img {
+        height: 15%;
+        width: 15%;
+    }
 
+    .d2 {
+        padding-top: 4vh;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {  /*tablette*/
+    .d2 .competences img {
+        height: 11%;
+        width: 11%;
+    }
+}
 
 @media screen and (max-width: 768px) { /*petit*/
     body {
@@ -15,7 +31,6 @@
         top: 5vh;
         flex-direction: column-reverse;
         align-items: center;
-        border-bottom: solid 1px black;
     }
 
     .d1, .l1 {
@@ -27,7 +42,11 @@
     .d2, .l2 {
         width: 75vw;
         min-height: 80vh;
-        padding-top: 10vw;
+    }
+
+    .d2 {
+        justify-content: center;
+        align-items: center;
     }
 
     .d1 img, .l1 img{
@@ -45,11 +64,18 @@
     }
 
     .load {
-        top: 5vh;
+        height: 100vh;
     }
+
+    .pp {
+        width: 10vh;
+        height: 10vh;
+        align-self: flex-start;
+    }
+
 }
 
-@media screen and (min-width: 768px) {  /*grand*/
+@media screen and (min-width: 769px) {  /*grand*/
     body {
         overflow: hidden;
     }
@@ -62,6 +88,7 @@
         width: 60vw;
         border-right: solid 1px black;
         justify-content: center;
+        height: 100vh;
     }
 
     .d2, .l2 {
@@ -93,6 +120,16 @@
         background-color: rgba(0, 0, 0, 0.062);
         width: 100vw;
         z-index: 2;
+    }
+
+    .d2 .competences img {
+        height: 10%;
+        width: 10%;
+    }
+
+    .pp {
+        width: 10vw;
+        height: 10vw;
     }
 }
 
@@ -151,8 +188,6 @@ main {
 }
 
 .pp {
-    width: 10vw;
-    height: 10vw;
     padding: 3vh;
 }
 
@@ -163,8 +198,6 @@ main {
 }
 
 .d2 .competences img {
-    height: 10%;
-    width: 10%;
     padding: 1vh;
     padding-left: 0;
 
@@ -199,7 +232,6 @@ main {
 
 .l1 {
     border: none;
-    height: 100vh;
 }
 
 .l1 img {

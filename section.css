@@ -2,18 +2,61 @@
     section {
         min-width: 100vw;
         min-height: 25vh;
+        border-top: solid 1px black;
+        border-right: none;
     }
 
     .s1, .s7 {
         min-height: 100vh;
+        border-top: none;
+    }
+
+    .s img {
+        width: 9vh;
+        height: 9vh;
     }
 
 }
 
-@media screen and (min-width: 768px) {  /*grand*/
+@media screen and (min-width: 769px) {  /*grand*/
     section {
         min-width: 25vw;
         min-height: 100vh;
+        border-right: solid 1px black;
+    }
+
+    .s img {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .s:hover .ig, .cross:hover .ig {
+        display: flex;
+    }
+    
+    .s:hover .ii, .cross:hover .ii {
+        display: none;
+    }
+
+    .s:hover {
+        background-color: black;
+        color: #f2f2f2;
+        transition: all 0.2s ease-out;
+    }
+    
+    .s:hover small {
+        color: #f2f2f2;
+        transition: all 0.2s ease-out;
+    }
+
+    .s7 a:hover img {
+        filter: invert();
+        transition: all 0.2s ease-out;
+    }
+    
+    .s7 a:hover {
+        color: #f2f2f2;
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -26,40 +69,18 @@ section {
     align-items: flex-end;
     background-color: #f2f2f2;
     z-index: 1;
-    border-right: solid 1px black;
     top: 0;
 }
 
-.s:hover {
-    background-color: black;
-    color: #f2f2f2;
-    transition: all 0.2s ease-out;
-}
 
-.s:hover small {
-    color: #f2f2f2;
-    transition: all 0.2s ease-out;
-}
 
 section > div {
     padding: 2vw;
     min-width: 21vw;
 }
 
-.s img {
-    width: 5vw;
-    height: 5vw;
-}
 
 .ig {
-    display: none;
-}
-
-.s:hover .ig, .cross:hover .ig {
-    display: flex;
-}
-
-.s:hover .ii, .cross:hover .ii {
     display: none;
 }
 
@@ -90,15 +111,7 @@ small {
     margin: 5px;
 }
 
-.s7 a:hover img {
-    filter: invert();
-    transition: all 0.2s ease-out;
-}
 
-.s7 a:hover {
-    color: #f2f2f2;
-    transition: all 0.2s ease-out;
-}
 
 .s7 a {
     text-align: center;
