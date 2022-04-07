@@ -15,38 +15,41 @@
         width: 9vh;
         height: 9vh;
     }
-
 }
 
 @media screen and (min-width: 769px) {  /*grand*/
     section {
         min-width: 25vw;
         min-height: 100vh;
-        border-right: solid 1px black;
+        border-left: solid 1px black;
     }
 
-    .s img {
+    .s img, .sh img {
         width: 5vw;
         height: 5vw;
     }
-
-    .s:hover .ig {
+    
+    .sh .ig, .s:hover .ig {
         display: flex;
     }
     
     .s:hover .ii {
         display: none;
     }
-
-    .s:hover {
+    
+    .sh, .s:hover{
         background-color: black;
         color: #f2f2f2;
         transition: all 0.2s ease-out;
     }
     
-    .s:hover small {
+    .sh small, .s:hover small{
         color: #f2f2f2;
         transition: all 0.2s ease-out;
+    }
+
+    #sh2 {
+        border: none;
     }
 
     .s7 a:hover img {
@@ -58,8 +61,11 @@
         color: #f2f2f2;
         transition: all 0.2s ease-out;
     }
-}
 
+    .s1 {
+        border: none;
+    }
+}
 
 /*Section*/
 
@@ -70,15 +76,22 @@ section {
     background-color: #f2f2f2;
     z-index: 1;
     top: 0;
+    cursor: pointer;
 }
 
-
+.sh {
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 1;
+    top: 0;
+    cursor: pointer;
+    border-left: solid 1px #f2f2f2;
+}
 
 section > div {
     padding: 2vw;
     min-width: 21vw;
 }
-
 
 .ig {
     display: none;
@@ -111,8 +124,6 @@ small {
     margin: 5px;
 }
 
-
-
 .s7 a {
     text-align: center;
     display: flex;
@@ -125,4 +136,12 @@ small {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+.s7, .s1 {
+    cursor: auto;
+}
+
+.sh {
+    display: none;
 }
