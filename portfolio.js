@@ -58,6 +58,20 @@ scrollContainer.addEventListener('scroll', () => {
     }
 })
 
+function sHover(sect){
+    document.querySelector('.s'+sect).style.backgroundColor = 'black';
+    document.querySelector('.s'+sect).style.color = '#f2f2f2';
+    document.querySelector('.s'+sect+' .ii').style.display = 'none';
+    document.querySelector('.s'+sect+' .ig').style.display = 'flex';
+}
+
+function sNotHover(sect){
+    document.querySelector('.s'+sect).style.backgroundColor = '#f2f2f2';
+    document.querySelector('.s'+sect).style.color = 'black';
+    document.querySelector('.s'+sect+' .ii').style.display = 'flex';
+    document.querySelector('.s'+sect+' .ig').style.display = 'none';
+}
+
 function viewRetex(sect,num){
     if (num!=quelRetex){
         if (quelRetex!=-1){
@@ -70,10 +84,11 @@ function viewRetex(sect,num){
             scrollTo(0, (window.innerHeight+1)*(1+0.25*(num-2)));
         }
         document.querySelector('.r'+sect).classList.add('rApres');
-        document.querySelector('.s'+sect).style.borderRight = 'none';
+    /*    document.querySelector('.s'+sect).style.borderRight = 'none';*/
         quelRetexS = sect;
         quelRetex = num;
         taillePage+=1;
+        sHover(sect);
     }
     else {
         fermerRetex(sect);
@@ -84,8 +99,9 @@ function viewRetex(sect,num){
 
 function fermerRetex(sect) {
     document.querySelector('.r'+sect).classList.remove('rApres');
+    sNotHover(sect);
     if (window.innerWidth>768){
-        document.querySelector('.s'+sect).style.borderRight = 'solid 1px black';
+       /* document.querySelector('.s'+sect).style.borderRight = 'solid 1px black';*/
     }
     taillePage-=1;
 }
