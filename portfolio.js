@@ -38,13 +38,7 @@ scrollContainer.addEventListener("wheel", (evt) => {
     }
 })
 
-
-window.addEventListener('touchmove', (evt) => {
-    fond.style.top = -screenY/200 + "vh";
-})
-
 scrollContainer.addEventListener('scroll', () => {
-    console.log("yo8");
     if (window.innerWidth>768){
         fond.style.top = "0";
         let scroll = scrollContainer.scrollLeft / (scrollContainer.clientWidth * taillePage);
@@ -61,8 +55,6 @@ scrollContainer.addEventListener('scroll', () => {
     else {
         fond.style.left = "0";
         fond.style.visibility = "visible";
-        fond.style.top = -screenY/200 + "vh";
-        console.log("yo5");
     }
 })
 
@@ -72,7 +64,7 @@ function viewRetex(sect,num){
             fermerRetex(quelRetexS);
         }
         if (window.innerWidth>768){
-            scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2));
+            scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2))+(num);
         }
         else {
             scrollTo(0, (window.innerHeight+1)*(1+0.25*(num-2)));

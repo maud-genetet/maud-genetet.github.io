@@ -2,6 +2,7 @@
 
     .r {
         min-width: 100vw;
+        flex-direction: column;
     }
 
     @keyframes retex {
@@ -9,8 +10,31 @@
             min-height: 0vh;
         }
         100% {
-            min-height: 75vh;
+            min-height: fit-content;
         }
+    }
+
+    .rtext {
+        width: 85vw;
+    }
+
+    .ligne {
+        flex-direction: column;
+    }
+
+    .rresultat img {
+        width: 85vw;
+        height: auto;
+    }
+
+    .rphoto img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .rtext img {
+        width: auto;
+        height: 7vh;
     }
 }
 
@@ -18,6 +42,7 @@
 
     .r {
         min-height: 100vh;
+        flex-direction: row;
     }
 
     @keyframes retex {
@@ -25,8 +50,37 @@
             min-width: 0vw;
         }
         100% {
-            min-width: 75vw;
+            min-width: fit-content;
         }
+    }
+
+    .rtext {
+        width: 40vw;
+    }
+
+    .ligne {
+        flex-direction: row;
+    }
+
+    .rresultat img {
+        height: 65vh;
+        width: auto;
+    }
+
+    .rphoto img {
+        height: 20vh;
+        width: auto;
+    }
+
+    .r a:hover {
+        color: black;
+        background-color: gainsboro;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .rtext img {
+        width: 3vw;
+        height: auto;
     }
 }
 
@@ -34,7 +88,6 @@
 
 .r {
     background-color: #f2f2f2;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     display: none;
@@ -44,10 +97,44 @@
 }
 
 .rApres {
-    animation: retex 1s both;
+    animation: retex 0s both;
     display: flex;
 }
 
+.rtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vw;
+}
+
+
+.rphoto, .rresultat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vw;
+}
+
+.rphoto img {
+    margin: 5px;
+}
+
+.ligne {
+    display: flex;
+}
+
+.rtext img {
+    float: right;
+}
+
+.r a {
+    text-decoration: none;
+    color: #f2f2f2;
+    background-color: black;
+    border-radius: 90px;
+    padding: 5px;
+}
 
 
 

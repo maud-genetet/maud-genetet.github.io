@@ -30,11 +30,11 @@
         height: 5vw;
     }
 
-    .s:hover .ig, .cross:hover .ig {
+    .s:hover .ig {
         display: flex;
     }
     
-    .s:hover .ii, .cross:hover .ii {
+    .s:hover .ii {
         display: none;
     }
 
