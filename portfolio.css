@@ -3,10 +3,6 @@
         height: 15%;
         width: 15%;
     }
-
-    .d2 {
-        padding-top: 4vh;
-    }
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px) {  /*tablette*/
@@ -21,6 +17,10 @@
         overflow-x: hidden;
     }
 
+    .load {
+        min-height: 100vh;
+    }
+
     main { 
         flex-direction: column;
         scroll-behavior: auto;
@@ -28,25 +28,40 @@
     }
 
     .fond {
-        top: 5vh;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
+        height: fit-content;
     }
 
     .d1, .l1 {
-        width: 100vw;
-        height: 20vh;
-        justify-content: flex-start;
+        min-width: 100vw;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+
+    .l1 {
+        min-height: 90vh;
+    }
+
+    .d1 {
+        height: 90vh;
     }
 
     .d2, .l2 {
         width: 75vw;
-        min-height: 80vh;
+        justify-content: flex-start;
+    }
+
+    .l2 {
+        height: 0;
     }
 
     .d2 {
-        justify-content: center;
         align-items: center;
+        min-height: 80vh;
+        justify-content: center;
     }
 
     .d1 img, .l1 img{
@@ -54,8 +69,13 @@
         max-height: 100%;
     }
 
-    .avant, .apres {
-        flex-direction: column-reverse;
+    .apres {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .avant {
+        height: 100vh;
     }
 
     .scroll, .scroll2 {
@@ -63,16 +83,16 @@
         display: none;
     }
 
-    .load {
-        height: 100vh;
-    }
-
-    .pp {
-        width: 10vh;
-        height: 10vh;
+    .l1 .pp, .d1 .pp {
+        width: 20vh;
+        height: 20vh;
         align-self: flex-start;
+        margin-bottom: 5vh;
     }
 
+    .d2 .pp {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 769px) {  /*grand*/
@@ -80,8 +100,16 @@
         overflow: hidden;
     }
 
+    .load {
+        height: 100vh;
+    }
+
     main { 
         scroll-behavior: unset;
+    }
+
+    .fond {
+        height: 100vh;
     }
 
     .d1, .l1 {
@@ -89,16 +117,22 @@
         border-right: solid 1px black;
         justify-content: center;
         height: 100vh;
+        align-items: flex-end;
     }
 
     .d2, .l2 {
         width: 35vw;
         padding: 5vh;
         max-height: 100vh;
+        justify-content: center;
     }
     .d1 img, .l1 img{
         width: 100%;
         height: auto;
+    }
+
+    .d1 .pp {
+        display: none;
     }
 
     /*Srcoll*/
@@ -131,6 +165,14 @@
         width: 10vw;
         height: 10vw;
     }
+
+    .avant, .apres {
+        height: 100vh;
+    }
+
+    .l1 img.pp {
+        display: none;
+    }
 }
 
 body {
@@ -154,7 +196,6 @@ main {
     top: 0;
     left: 0;
     display: flex;
-    height: 100vh;
     width: 100vw;
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(255, 174, 0, 0.8), rgba(0,255,0,0) 70.71%),
@@ -164,7 +205,6 @@ main {
 
 .d1, .l1 {
     display: flex;
-    align-items: flex-end;
 }
 
 .d1 img, .l1 img{
@@ -174,7 +214,6 @@ main {
 .d2, .l2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     font-size: 2.5vh;
 }
 
@@ -214,7 +253,6 @@ main {
     color: white;
     position: fixed;
     width: 100vw;
-    height: 100vh;
     top: 0;
     left: 0;
 }
@@ -227,7 +265,6 @@ main {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
 }
 
 .l1 {
@@ -236,6 +273,11 @@ main {
 
 .l1 img {
     filter: invert();
+    opacity: 0;
+}
+
+.l1 img.pp {
+    filter: none;
     opacity: 0;
 }
 

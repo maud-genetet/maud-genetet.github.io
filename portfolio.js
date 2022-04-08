@@ -6,7 +6,8 @@ const body = document.querySelector('body');
 const fond = document.querySelector('.fond');
 const scrollContainer = document.querySelector("main");
 const cross = document.querySelector('.cross');
-const l1 = document.querySelector('.l1 img');
+const l1 = document.querySelector('.l1 img.nom');
+const l1pp = document.querySelector('.l1 img.pp');
 const imageChargement = document.querySelector('.avant img');
 var quelRetexS = '';
 var quelRetex = -1;
@@ -31,6 +32,7 @@ const r6 = document.querySelector('.r6');
 window.addEventListener('load', () => {
     loader.classList.add('loadTerminer');
     l1.classList.add('loadTerminer2');
+    l1pp.classList.add('loadTerminer2');
     imageChargement.classList.add('loadTerminer3');
 })
 
@@ -64,22 +66,6 @@ scrollContainer.addEventListener('scroll', () => {
     }
 })
 
-function sHover(sect){
-    document.querySelector('.s'+sect).style.backgroundColor = 'black';
-    document.querySelector('.s'+sect).style.color = '#f2f2f2';
-    document.querySelector('.s'+sect+' .ii').style.display = 'none';
-    document.querySelector('.s'+sect+' .ig').style.display = 'flex';
-    document.querySelector('.s'+sect+' small').style.color = '#f2f2f2';
-}
-
-function sNotHover(sect){
-    document.querySelector('.s'+sect).style.backgroundColor = '#f2f2f2';
-    document.querySelector('.s'+sect).style.color = 'black';
-    document.querySelector('.s'+sect+' .ii').style.display = 'flex';
-    document.querySelector('.s'+sect+' .ig').style.display = 'none';
-    document.querySelector('.s'+sect+' small').style.color = 'rgba(0, 0, 0, 0.575)';
-}
-
 function viewRetex(sect,num){
     if (num!=quelRetex){
         if (quelRetex!=-1){
@@ -92,6 +78,7 @@ function viewRetex(sect,num){
             scrollTo(0, (window.innerHeight+1)*(1+0.25*(num-2)));
         }
         document.querySelector('.r'+sect).classList.add('rApres');
+        /*document.querySelectorAll('.e'+sect);*/
         quelRetexS = sect;
         quelRetex = num;
         taillePage+=1;

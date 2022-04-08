@@ -118,7 +118,20 @@
     width: 0vw;
     z-index: 2;
 }
+/*
+.rApresElement {
+    animation: retexElement 1s both;
+}
 
+@keyframes retexElement {
+    0%, 50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*/
 .rApres {
     animation: retex 0s both;
     display: flex;
@@ -160,6 +173,7 @@
     border-radius: 90px;
     padding: 7px;
     justify-content: center;
+    text-align: center;
     align-items: center;
     display: flex;
     width: fit-content;

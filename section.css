@@ -7,13 +7,25 @@
     }
 
     .s1, .s7 {
-        min-height: 100vh;
         border-top: none;
+    }
+
+    .s7 {
+        min-height: 100vh;
+    }
+
+    .s1 {
+        min-height: 180vh;
     }
 
     .s img {
         width: 9vh;
         height: 9vh;
+    }
+
+    section > div {
+        padding: 5vw;
+        min-width: 15vw;
     }
 }
 
@@ -64,6 +76,13 @@
 
     .s1 {
         border: none;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    section > div {
+        padding: 2vw;
+        min-width: 21vw;
     }
 }
 
@@ -88,11 +107,6 @@ section {
     border-left: solid 1px #f2f2f2;
 }
 
-section > div {
-    padding: 2vw;
-    min-width: 21vw;
-}
-
 .ig {
     display: none;
 }
@@ -103,7 +117,6 @@ small {
 
 .s1 {
     background-color: transparent;
-    min-width: 100vw;
 }
 
 .s7 {
