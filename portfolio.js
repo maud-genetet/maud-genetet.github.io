@@ -75,7 +75,7 @@ function viewRetex(sect,num){
             scrollContainer.scrollLeft = scrollContainer.clientWidth*(1+0.25*(num-2))+(num);
         }
         else {
-            scrollTo(0, (window.innerHeight+1)*(1+0.25*(num-2)));
+            scrollTo(0, (window.innerHeight+1)*(1.8+0.25*(num-2)));
         }
         document.querySelector('.r'+sect).classList.add('rApres');
         /*document.querySelectorAll('.e'+sect);*/
@@ -108,6 +108,22 @@ function fermerRetex(sect) {
         document.querySelector('.sh'+sect).style.display = 'none';
     }
     taillePage-=1;
+}
+
+function sHover(sect){
+    document.querySelector('.s'+sect).style.backgroundColor = 'black';
+    document.querySelector('.s'+sect).style.color = '#f2f2f2';
+    document.querySelector('.s'+sect+' .ii').style.display = 'none';
+    document.querySelector('.s'+sect+' .ig').style.display = 'flex';
+    document.querySelector('.s'+sect+' small').style.color = '#f2f2f2';
+}
+
+function sNotHover(sect){
+    document.querySelector('.s'+sect).style.backgroundColor = '#f2f2f2';
+    document.querySelector('.s'+sect).style.color = 'black';
+    document.querySelector('.s'+sect+' .ii').style.display = 'flex';
+    document.querySelector('.s'+sect+' .ig').style.display = 'none';
+    document.querySelector('.s'+sect+' small').style.color = 'rgba(0, 0, 0, 0.575)';
 }
 
 s2.addEventListener('click', event => {
