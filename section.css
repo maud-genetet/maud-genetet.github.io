@@ -33,6 +33,7 @@
     section {
         min-width: 25vw;
         min-height: 100vh;
+        max-height: 100vh;
         border-left: solid 1px black;
     }
 

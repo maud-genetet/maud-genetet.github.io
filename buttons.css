@@ -1,7 +1,85 @@
 @media screen and (max-width: 768px) { /*petit*/
-    a.contactButton, a.contactButtonFond, a.projetButtonFond, a.projetButton {
+    a.b {
         display: none;
         visibility: hidden;
+    }
+
+    nav a.menuButton {
+        width: 5vh;
+        height: 5vh;
+        position: fixed;
+        top: 2.5vh;
+        right: 2.5vh;
+        margin: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: white;
+        border-radius: 90px;
+    }
+
+    .bA {
+        mix-blend-mode: difference;
+        filter: drop-shadow(0 0 0 black);
+        z-index: 4;
+    }
+
+    .bA img {
+        mix-blend-mode: difference;
+    }
+
+    .bF {
+        display: none;
+        z-index: 1;
+        background-color: white;
+    }
+
+    .bF img{
+        filter: none;
+    }
+
+    .menuButton img {
+        width: 3vh;
+        height: auto;
+        filter: invert();    
+    }
+
+    nav div.menu {
+        display: none;
+        min-height: 100vh;
+        z-index: 3;
+        min-width: 100vw;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background-color: #ff5c3e;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    a.menuItem {
+        text-decoration: none;
+        color: white;
+        font-size: large;
+        margin: 1vh;
+    }
+
+    .monNom {
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        z-index: 4;
+        display: none;
+        justify-content: center;
+        margin-bottom: 10vh;
+    }
+
+    .monNom img {
+        width: 50vw;
+        height: auto;
+        filter: invert();
     }
 }
 
@@ -11,7 +89,7 @@
         visibility: hidden;
     }
 
-    a.contactButton, a.contactButtonFond, a.projetButtonFond, a.projetButton {
+    a.b {
         display: flex;
         position: fixed;
         background-color: white;
@@ -32,35 +110,39 @@
         top: 5vh;
     }
     
-    a.contactButton, a.contactButtonFond {
+    a.contactButton {
         right: 3vw;
     }
     
-    a.projetButtonFond, a.projetButton {
+    a.projetButton {
         right: 12vw;
     }
+
+    a.accueilButton {
+        right: 21vw;
+    }
     
-    a.contactButton, a.projetButton{
+    a.buttons{
         mix-blend-mode: difference;
         z-index: 4;
         filter: drop-shadow(0 0 0 black);
     }
     
-    a.contactButtonFond, a.projetButtonFond {
+    a.buttonsF {
         z-index: 1;
     }
     
-    .contactButton span, .projetButton span{
+    .buttons span{
         mix-blend-mode: difference;
     }
     
-    .contactButton:hover span, .projetButton:hover span {
+    .buttons:hover span {
         color: white;
         mix-blend-mode: color;
         mix-blend-mode: revert;
     }
     
-    .contactButton:hover, .projetButton:hover {
+    .buttons:hover {
         background-color: rgba(255, 174, 0, 0.8);
         filter: none;
         transition: all 0.2s ease-out;

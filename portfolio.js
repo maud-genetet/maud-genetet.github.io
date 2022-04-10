@@ -9,9 +9,16 @@ const cross = document.querySelector('.cross');
 const l1 = document.querySelector('.l1 img.nom');
 const l1pp = document.querySelector('.l1 img.pp');
 const imageChargement = document.querySelector('.avant img');
+const menuButton = document.querySelector('.bA');
+const menuButtonF = document.querySelector('.bF');
+const menuButtonFImg = document.querySelector('.bF img');
+const menu = document.querySelector('.menu');
+const menuNom = document.querySelector('.monNom');
+
 var quelRetexS = '';
 var quelRetex = -1;
 var taillePage = 2.20;
+var onMenu = false;
 
 const s2 = document.querySelector('.s2');
 const sh2 = document.querySelector('.sh2');
@@ -28,6 +35,11 @@ const r5 = document.querySelector('.r5');
 const s6 = document.querySelector('.s6');
 const sh6 = document.querySelector('.sh6');
 const r6 = document.querySelector('.r6');
+
+const mi1 = document.querySelector('.mi1');
+const mi2 = document.querySelector('.mi2');
+const mi3 = document.querySelector('.mi3');
+const mi4 = document.querySelector('.mi4');
 
 window.addEventListener('load', () => {
     loader.classList.add('loadTerminer');
@@ -169,4 +181,39 @@ sh6.addEventListener('click', event => {
 projetButton.addEventListener('click', event => {
     scrollContainer.scrollLeft = scrollContainer.clientWidth;
     
+})
+
+menuButton.addEventListener('click', event => { 
+    menu.style.display = 'flex';
+    menuNom.style.display = 'flex';
+    menuButtonF.style.zIndex = '5';
+    menuButtonFImg.style.filter = 'none';
+})
+
+menuButtonF.addEventListener('click', event => {
+    fermerMenu();
+})
+
+function fermerMenu(){
+    menu.style.display = 'none';
+    menuNom.style.display = 'none';
+    menuButtonF.style.zIndex = '1';
+    menuButtonFImg.style.filter = 'invert()';
+}
+
+mi1.addEventListener('click', event => {
+    fermerMenu();
+})
+
+mi2.addEventListener('click', event => {
+    fermerMenu();
+    scrollTo(0, window.innerHeight);
+})
+
+mi3.addEventListener('click', event => {
+    fermerMenu();
+})
+
+mi4.addEventListener('click', event => {
+    fermerMenu();
 })

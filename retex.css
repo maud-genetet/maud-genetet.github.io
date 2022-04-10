@@ -48,6 +48,7 @@
 @media screen and (min-width: 769px) {  /*grand*/
 
     .r {
+        max-height: 100vh;
         min-height: 100vh;
         flex-direction: row;
     }
@@ -62,7 +63,7 @@
     }
 
     .rtext {
-        width: 40vw;
+        min-width: 40vw;
         margin-left: 2.5vw;
     }
 
@@ -116,7 +117,7 @@
     align-items: center;
     display: none;
     width: 0vw;
-    z-index: 2;
+    z-index: 0;
 }
 /*
 .rApresElement {
