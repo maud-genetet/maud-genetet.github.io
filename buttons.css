@@ -1,3 +1,8 @@
+@font-face {
+    font-family: block;
+    src: url(data/theboldfont.ttf);
+}
+
 @media screen and (max-width: 768px) { /*petit*/
     a.b {
         display: none;
@@ -45,6 +50,11 @@
         filter: invert();    
     }
 
+    .menu div {
+        display: flex;
+        flex-direction: column;
+    }
+
     nav div.menu {
         display: none;
         min-height: 100vh;
@@ -56,14 +66,14 @@
         background-color: #ff5c3e;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
     }
 
     a.menuItem {
         text-decoration: none;
         color: white;
-        font-size: large;
+        font-size: x-large;
         margin: 1vh;
+        font-family: block;
     }
 
     .monNom {
