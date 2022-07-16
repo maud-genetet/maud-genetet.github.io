@@ -95,8 +95,16 @@
         background-color: #4d7c3b;
     }
 
-    .r3 .rapport:hover {
+    .rKT:hover {
         background-color: #1c2a3b;
+    }
+
+    .rSnake:hover {
+        background-color: #0075ff;
+    }
+
+    .rCafePierre:hover {
+        background-color: #5c744e;
     }
 
     .r4 .rapport:hover {
