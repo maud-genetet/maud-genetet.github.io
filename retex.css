@@ -82,6 +82,11 @@
         width: auto;
     }
 
+    .rresultat img.petit {
+        height: 40vh;
+        width: auto;
+    }
+
     .rphoto img {
         height: 20vh;
         width: auto;
