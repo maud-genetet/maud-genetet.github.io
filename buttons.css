@@ -4,6 +4,16 @@
 }
 
 @media screen and (max-width: 768px) { /*petit*/
+    #changementLangue{
+        top: 3.5vh;
+        left: 2.5vh;
+        margin: 5vw;
+    }
+
+    #changementLangue img{
+        height: 3vh;
+    }
+
     a.b {
         display: none;
         visibility: hidden;
@@ -94,6 +104,16 @@
 }
 
 @media screen and (min-width: 769px) { /*grand*/
+    #changementLangue{
+        top: 5vh;
+        left: 3vw;
+        margin: 5px;
+    }
+
+    #changementLangue img{
+        height: 3.5vh;
+    }
+
     nav {
         display: none;
         visibility: hidden;
@@ -162,4 +182,17 @@
     a {
         cursor: pointer;
     }
+}
+
+#changementLangue{
+    position: fixed;
+    z-index: 4;
+}
+
+#changementLangue img{
+    border-radius: 15%;
+}
+
+#changementLangue img:hover{
+    filter: brightness(0.5);
 }

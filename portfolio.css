@@ -13,6 +13,7 @@
 }
 
 @media screen and (max-width: 768px) { /*petit*/
+
     body {
         overflow-x: hidden;
     }
@@ -96,6 +97,7 @@
 }
 
 @media screen and (min-width: 769px) {  /*grand*/
+
     body {
         overflow: hidden;
     }
@@ -290,15 +292,15 @@ main {
 }
 
 .loadTerminer {
-    animation: load 2.5s 1s both;
+    animation: load 2s 1s both;
 }
 
 .loadTerminer2 {
-    animation: load2 2.5s 1s both;
+    animation: load2 2s 1s both;
 }
 
 .loadTerminer3 {
-    animation: load3 2.5s 1s both;
+    animation: load3 2s 1s both;
 }
 
 @keyframes load {
