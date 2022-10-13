@@ -1,3 +1,16 @@
+#changementLangue{
+    position: fixed;
+    z-index: 4;
+}
+
+#changementLangue img{
+    border-radius: 15%;
+}
+
+#changementLangue img:hover{
+    filter: brightness(0.5);
+}
+
 @font-face {
     font-family: block;
     src: url(data/theboldfont.ttf);
@@ -182,17 +195,4 @@
     a {
         cursor: pointer;
     }
-}
-
-#changementLangue{
-    position: fixed;
-    z-index: 4;
-}
-
-#changementLangue img{
-    border-radius: 15%;
-}
-
-#changementLangue img:hover{
-    filter: brightness(0.5);
 }
