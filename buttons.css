@@ -86,7 +86,8 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        background-color: #ff5c3e;
+        background-color: #3b4254;
+        /*background-color: #ff5c3e;*/
         justify-content: center;
         align-items: center;
     }
@@ -186,7 +187,8 @@
     }
     
     .buttons:hover {
-        background-color: rgba(255, 174, 0, 0.8);
+        background-color: #3b4254;
+        /*background-color: rgba(255, 174, 0, 0.8);*/
         filter: none;
         transition: all 0.2s ease-out;
         mix-blend-mode: revert;
