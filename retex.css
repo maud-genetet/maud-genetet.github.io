@@ -116,6 +116,10 @@
         background-color: #804998;
     }
 
+    .arbres_decisionnels .rapport:hover {
+        background-color: #DF7D38;
+    }
+
     .rtext img {
         width: 3vw;
         height: auto;
